@@ -3,7 +3,7 @@ import {Provider} from "react-redux";
 import {store} from "../store";
 import {BrowserRouter} from "react-router-dom";
 import React from "react";
-import NewPoll from "./NewPoll";
+import NewPoll from "../components/NewPoll";
 
 describe("NewPoll", () => {
     it("should render the component", () => {

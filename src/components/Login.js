@@ -4,8 +4,8 @@ import { useState } from "react";
 import { handleLogin } from "../actions/authedUser";
 
 const Login = ({ dispatch, loggedIn }) => {
-    const [username, setUsername] = useState("sarahedo");
-    const [password, setPassword] = useState("password123");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     if (loggedIn) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -35,11 +35,12 @@ const Login = ({ dispatch, loggedIn }) => {
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h1 className="mt-50 text-center text-3xl font-bold leading-30 tracking-tight text-gray-900">Employee Polls</h1>
                 <img className="mx-auto w-auto" src="./images/people.png" alt="employee polls" />
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Log In</h2>
+                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+                data-testid="login-heading">Log In</h2>
             </div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="username" className="block text-sm font-medium text-slate-700">User</label>
+                    <label htmlFor="username" className="text-center block text-sm font-medium text-slate-700">User</label>
                     <div className="mt-1">
                         <input
                             value={username}
@@ -52,7 +53,7 @@ const Login = ({ dispatch, loggedIn }) => {
                     </div>
                 </div>
                 <div className="mt-6">
-                    <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label>
+                    <label htmlFor="password" className="text-center block text-sm font-medium text-slate-700">Password</label>
                     <div className="mt-1">
                         <input
                             value={password}

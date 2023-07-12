@@ -3,7 +3,7 @@ import {Provider} from "react-redux";
 import {store} from "../store";
 import {BrowserRouter} from "react-router-dom";
 import React from "react";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import {setAuthedUser} from "../actions/authedUser";
 
 describe("Nav", () => {
@@ -33,7 +33,7 @@ describe("Nav", () => {
         );
 
         const userSpanElement = component.getByTestId("user-information");
-        expect(userSpanElement.textContent).toBe("User: sarahedo");
+        expect(userSpanElement.textContent).toBe("sarahedo");
 
     });
 });
