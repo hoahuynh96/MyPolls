@@ -22,6 +22,8 @@ export function handleLogin(username, password) {
 
         if (!!user) {
             return dispatch(setAuthedUser(user));
+        } else {
+            return alert('Login fail');
         }
     };
 }
